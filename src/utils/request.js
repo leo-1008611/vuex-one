@@ -1,3 +1,11 @@
+/*
+ * @Author: liujinyang
+ * @Date: 2019-04-23 15:12:48
+ * @Last Modified by: liujinyang
+ * @email: leo_1008611@163.com
+ * @Last Modified time: 2019-04-23 15:13:37
+ */
+
 // eslint-disable-line
 import axios from "axios";
 import qs from "qs";

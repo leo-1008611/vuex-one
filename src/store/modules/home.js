@@ -20,7 +20,7 @@ const mutations = {
     state.count -= playload.num;
   },
   getList: (state, playload) => {
-    state.list = playload.list;
+    state.list = playload.data;
   }
 };
 const actions = {

@@ -15,7 +15,7 @@
 import HelloWorld from "@/components/HelloWorld.vue";
 import ProductionOne from "@/components/ProductionOne.vue";
 import ProductionTwo from "@/components/ProductionTwo.vue";
-import { mapState, mapMutations, mapActions } from "vuex";
+import { mapState, mapMutations } from "vuex";
 export default {
   name: "home",
   data() {
@@ -29,27 +29,26 @@ export default {
     };
   },
   computed: {
-    ...mapState(["count", "info", "msg", "list"])
+    // ...mapState(["count", "info", "msg", "list"])
+    ...mapState({
+      count: state => state.home.count,
+      info: state => state.home.info,
+      msg: state => state.home.msg,
+      list: state => state.home.list
+    })
   },
   components: {
     HelloWorld,
     ProductionOne,
     ProductionTwo
   },
-  created() {
-    this.getArrList();
-  },
   methods: {
     ...mapMutations([`add`, `reduce`, `getList`]),
-    ...mapActions([`getList`]),
     addCount() {
       this.$store.commit("add", { num: 10 });
     },
     reduceCount() {
       this.$store.commit("reduce", { num: 10 });
-    },
-    getArrList() {
-      this.getList();
     }
   }
 };

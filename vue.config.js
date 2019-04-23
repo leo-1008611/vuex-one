@@ -39,7 +39,7 @@ module.exports = {
     //     }
     //   }
     // } // 代理转发配置，用于调试环境
-    proxy: 'http://172.28.50.78:8081/'
+    proxy: 'http://wwww.baidu.com/api'
   },
   // 配置入口 加载 文件
   pages: {

@@ -4,12 +4,12 @@
     <h2>{{ count }}</h2>
     <h2>{{ count }} / 2 = {{ countNum }}</h2>
     <ul>
-      <li v-for="item in list" :key="item.index">{{ item.name }}</li>
+      <li v-for="item in list" :key="item.id">{{ item.title }}</li>
     </ul>
   </div>
 </template>
 <script>
-import { mapState, mapMutations, mapActions } from "vuex";
+import { mapState, mapActions, mapGetters } from "vuex";
 export default {
   name: "about",
   data() {
@@ -18,13 +18,16 @@ export default {
     };
   },
   computed: {
-    ...mapState(["count", "list", "countNum"])
+    ...mapGetters([`countNum`]),
+    ...mapState({
+      count: state => state.home.count,
+      list: state => state.home.list
+    })
   },
   created() {
     this.getArrList();
   },
   methods: {
-    ...mapMutations([`add`, `reduce`, `getList`]),
     ...mapActions([`getList`]),
     getArrList() {
       this.getList();
