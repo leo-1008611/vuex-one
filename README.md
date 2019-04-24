@@ -12,6 +12,18 @@ npm run lint
 npm run test:unit
 ```
 
+```bash
+### description
+
+这个项目是由vue-cli3.0脚手架搭建，
+
+是用eslint校验规则，
+
+css预处理器是scss，
+
+vuex为状态管理。
+
+```
 
 ### VUEX 小demo  
 ```
