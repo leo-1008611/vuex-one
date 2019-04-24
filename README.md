@@ -43,15 +43,15 @@ npm run test:unit
 
 # 借鉴大神的vue总体图
 
-##vue知识体系
+###vue知识体系
 !['知识体系'](/src/assets/API.png)
-##自定义指令
+###自定义指令
 !['自定义指令'](/src/assets/directive.png)
-##VUE 整体API
+###VUE 整体API
 !['vue-api'](/src/assets/vueAPI.png)
-##生命周期
+###生命周期
 !['生命周期'](/src/assets/生命周期.png)
-##优雅代码风格
+###优雅代码风格
 !['优雅代码风格'](/src/assets/代码优雅.png)
 
 
@@ -59,4 +59,4 @@ npm run test:unit
 
 
 
-####[vue代码风格指南](https://cn.vuejs.org/v2/style-guide/)
+###[vue代码风格指南](https://cn.vuejs.org/v2/style-guide/)
