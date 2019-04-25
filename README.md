@@ -1,4 +1,4 @@
-# vuex 小demo
+# vuex 
 ```bash
 ## Project setup
 npm install
@@ -25,7 +25,7 @@ vuex为状态管理。
 
 ```
 
-### VUEX 小demo  
+### 项目目录  
 ```
 ├─src  
   ├─api        api请求地址  
