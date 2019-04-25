@@ -43,13 +43,12 @@ vuex为状态管理。
     ├─modules
       └─home      vuex模块 
     └─index       主文件   
-    └─approuter     福州网关路由    
   ├─utils       项目公用JS  
     └─request       请求封装  
-  ├─router      网关路由配置  
+  ├─router      路由配置  
   └─views       页面组件  
-    ├─About      授权管理
-    └─Home       系统配置  
+    ├─About      
+    └─Home         
 ```
 
 

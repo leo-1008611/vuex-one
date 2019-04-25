@@ -7,6 +7,7 @@ import api from "@/api";
 
 Vue.config.productionTip = false;
 Vue.prototype.$api = api;
+Vue.config.devtools = true; // 浏览器 vue vdom节点
 
 for (let key in filters) {
   Vue.filter(key, filters[key]);
