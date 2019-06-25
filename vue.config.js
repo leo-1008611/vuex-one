@@ -11,15 +11,18 @@ function resolve(dir) {
 module.exports = {
   // 运行路径
   publicPath: env === 'production' ? './' : '/',
+
   // 打包地址
   // outputDir: 'dist',
   // 相对于 dist 文件夹的静态资源放置目录
   // assetsDir: '/',
-  
+
   // 是否可以使用template
   runtimeCompiler: true,
+
   // 禁止生成map 文件 
   productionSourceMap: false,
+
   devServer: {
     host: '0.0.0.0', // 允许外部ip访问
     port: 8022, // 端口
@@ -41,6 +44,7 @@ module.exports = {
     // } // 代理转发配置，用于调试环境
     proxy: 'http://wwww.baidu.com/api'
   },
+
   // 配置入口 加载 文件
   pages: {
     index: {
@@ -59,6 +63,7 @@ module.exports = {
       chunks: ['vendor', 'runtime', 'echarts', 'index']
     }
   },
+
   css: {
     extract: true, // 是否使用css分离插件 ExtractTextPlugin
     sourceMap: false, // 开启 CSS source maps?
@@ -68,8 +73,10 @@ module.exports = {
     }, // css预设器配置项 详见https://cli.vuejs.org/zh/config/#css-loaderoptions
     modules: false // 启用 CSS modules for all css / pre-processor files.
   },
+
   // 开发环境是否使用eslint
   lintOnSave: true,
+
   chainWebpack: config => {
     config.plugins.delete('prefetch-index')
     // 修改它的选项...
@@ -108,12 +115,9 @@ module.exports = {
     config.resolve.alias
       .set('@', resolve('src'))
       .set('@c', resolve('src/components'))
-      .set('assets', resolve('src/assets'))
-      .set('styles', resolve('src/styles'))
-      .set('views', resolve('src/views'))
-      .set('utils', resolve('src/utils'))
-      .set('store', resolve('src/store'))
+      .set('@s', resolve('src/styles'))
   },
+
   // 如果是对象 merge合并到最终的配置  如果是函数 接受被解析的配置
   configureWebpack: config => {
     if (env === 'production') {
@@ -179,6 +183,12 @@ module.exports = {
           minRatio: 0.8
         })
       )
+    }
+  },
+  pluginOptions: {
+    'style-resources-loader': {
+      preProcessor: 'stylus',
+      patterns: []
     }
   }
 }
