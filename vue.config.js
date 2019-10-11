@@ -1,7 +1,6 @@
 // vue.config.js
 const webpack = require('webpack')
 const path = require('path')
-const UglifyPlugin = require('uglifyjs-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
 const env = process.env.NODE_ENV
@@ -154,17 +153,7 @@ module.exports = {
               enforce: true
             }
           }
-        },
-        minimizer: [new UglifyPlugin({
-          uglifyOptions: {
-            compress: {
-              warnings: false,
-              drop_console: true, // console
-              drop_debugger: false,
-              pure_funcs: ['console.log'] // 移除console
-            }
-          }
-        })]
+        }
       }
       Object.assign(config, {
         optimization

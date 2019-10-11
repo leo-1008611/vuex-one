@@ -22,6 +22,11 @@ export default new Router({
       path: "/demo",
       name: "demo",
       component: _import(/* webpackChunkName: "demo" */ "demo")
+    },
+    {
+      path: "/tree",
+      name: "tree",
+      component: _import(/* webpackChunkName: "tree" */ "test/tree")
     }
   ]
 });

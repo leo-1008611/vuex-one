@@ -3,8 +3,8 @@
     <ul>
       <li>愿你今生有良人可依</li>
       <li>才允我不负如来不负卿</li>
-      <li>愿我今生可有万般福气</li>
-      <li>才允我俘获佳人芳心</li>
+      <li>愿我今生有万般福气</li>
+      <li>才允我荣获佳人俘获你</li>
     </ul>
   </div>
 </template>
@@ -19,4 +19,7 @@ export default {
 };
 </script>
 
-<style scoped lang="stylus"></style>
+<style scoped lang="stylus">
+li
+  margin: 5px 0;
+</style>
