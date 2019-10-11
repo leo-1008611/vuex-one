@@ -7,6 +7,7 @@
       <router-link to="/tree">tese - tree</router-link>
     </div>
     123 木头人
+    456 
     <router-view />
   </div>
 </template>
