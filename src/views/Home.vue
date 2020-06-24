@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    {{ name }}
     <p>{{ count }}</p>
     <p>{{ msg }}</p>
     <p>{{ info }}</p>
@@ -11,11 +12,11 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
 import ProductionOne from "@/components/ProductionOne.vue";
 import ProductionTwo from "@/components/ProductionTwo.vue";
 import { mapState, mapMutations } from "vuex";
+import { numFuc } from "leo-21";
 export default {
   name: "home",
   data() {
@@ -25,8 +26,12 @@ export default {
         { name: `键盘`, price: 40 },
         { name: `耳机`, price: 60 },
         { name: `显示屏`, price: 80 }
-      ]
+      ],
+      name: "刘晋阳一定好好加油"
     };
+  },
+  created() {
+    this.name = numFuc(this.name);
   },
   computed: {
     // ...mapState(["count", "info", "msg", "list"])
